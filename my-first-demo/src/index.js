@@ -3,37 +3,41 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
-const firstBook = {
-  title: "Atomic Habits",
-  img: "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UY436_FMwebp_QL65_.jpg",
-  author: "James Clear",
-};
-
-const secondBook = {
-  title:
-    "You Only Live Once: One for Passion Two for Love Three for Friendship",
-  img: "https://m.media-amazon.com/images/I/71dNsRuYL7L._AC_UY436_FMwebp_QL65_.jpg",
-  author: "Stuti Changle",
-};
+const books = [
+  {
+    title: "Atomic Habits",
+    img: "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UY436_FMwebp_QL65_.jpg",
+    author: "James Clear",
+    id: 1,
+  },
+  {
+    title:
+      "You Only Live Once: One for Passion Two for Love Three for Friendship",
+    img: "https://m.media-amazon.com/images/I/71dNsRuYL7L._AC_UY436_FMwebp_QL65_.jpg",
+    author: "Stuti Changle",
+    id: 2,
+  },
+  {
+    title: "A Gentelmen in Moscow",
+    img: "https://m.media-amazon.com/images/I/51k+lXZyJ6L._SY344_BO1,204,203,200_.jpg",
+    author: "Amor Towles",
+    id: 3,
+  },
+];
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book
-        img={firstBook.img}
-        title={firstBook.title}
-        author={firstBook.author}
-      />
-      <Book
-        img={secondBook.img}
-        title={secondBook.title}
-        author={secondBook.author}
-      />
+      {books.map((book) => {
+        const { img, title, author, id } = book;
+        return <Book img={img} title={title} author={author} key={id} />;
+      })}
     </section>
   );
 }
-const Book = ({ img, title, author }) => {
-  console.log(img, title, author);
+
+const Book = (props) => {
+  const { img, title, author } = props;
   return (
     <article className="book">
       <img src={img} alt={title} />
@@ -42,6 +46,5 @@ const Book = ({ img, title, author }) => {
     </article>
   );
 };
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<BookList />);
