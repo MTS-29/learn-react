@@ -3,27 +3,42 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
-const title = "Atomic Habits";
-const img =
-  "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UY436_FMwebp_QL65_.jpg";
-const author = "James Clear";
+const firstBook = {
+  title: "Atomic Habits",
+  img: "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UY436_FMwebp_QL65_.jpg",
+  author: "James Clear",
+};
+
+const secondBook = {
+  title:
+    "You Only Live Once: One for Passion Two for Love Three for Friendship",
+  img: "https://m.media-amazon.com/images/I/71dNsRuYL7L._AC_UY436_FMwebp_QL65_.jpg",
+  author: "Stuti Changle",
+};
 
 function BookList() {
   return (
     <section className="booklist">
-      <Book img={img} title={title} author={author} />
-      <Book img={img} title={title} author={author} />
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      />
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
     </section>
   );
 }
-const Book = (props) => {
-  console.log(props);
-
+const Book = ({ img, title, author }) => {
+  console.log(img, title, author);
   return (
     <article className="book">
-      <img src={props.img} alt={props.title} />
-      <h2>{props.title}</h2>
-      <h4>{props.author}</h4>
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
 };
