@@ -38,7 +38,7 @@ function BookList() {
 
 const EventExamples = () => {
   const handleFormInput = (e) => {
-    // console.log(e);
+    console.log(e);git s
     // console.log(e.target.name);
     // console.log(e.target.value);
   };
@@ -61,7 +61,7 @@ const EventExamples = () => {
           onChange={handleFormInput}
         />
         <br></br>
-        <button type="submit" onClick={handleButtonClick}>
+        <button onClick={() => console.log("Click mr")} type="button">
           Click me
         </button>
       </form>
