@@ -38,9 +38,8 @@ function BookList() {
 
 const EventExamples = () => {
   const handleFormInput = (e) => {
-    console.log(e);git s
+    console.log(e);
     // console.log(e.target.name);
-    // console.log(e.target.value);
   };
 
   const handleButtonClick = () => {
