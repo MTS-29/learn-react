@@ -1,19 +1,23 @@
+import img1 from "./images/img1.webp";
+import img2 from "./images/img2.webp";
+import img3 from "./images/img3.jpg";
+
 export const books = [
   {
     title: "Atomic Habits",
-    img: "https://m.media-amazon.com/images/I/91bYsX41DVL._AC_UY436_FMwebp_QL65_.jpg",
+    img: img1,
     author: "James Clear",
     id: 1,
   },
   {
     title: "You Only Live Once",
-    img: "https://m.media-amazon.com/images/I/71dNsRuYL7L._AC_UY436_FMwebp_QL65_.jpg",
+    img: img2,
     author: "Stuti Changle",
     id: 2,
   },
   {
     title: "A Gentelmen in Moscow",
-    img: "https://m.media-amazon.com/images/I/51k+lXZyJ6L._SY344_BO1,204,203,200_.jpg",
+    img: img3,
     author: "Amor Towles",
     id: 3,
   },
