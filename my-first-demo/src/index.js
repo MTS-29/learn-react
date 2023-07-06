@@ -11,8 +11,7 @@ const books = [
     id: 1,
   },
   {
-    title:
-      "You Only Live Once: One for Passion Two for Love Three for Friendship",
+    title: "You Only Live Once",
     img: "https://m.media-amazon.com/images/I/71dNsRuYL7L._AC_UY436_FMwebp_QL65_.jpg",
     author: "Stuti Changle",
     id: 2,
